@@ -1,0 +1,212 @@
+
+
+$size: 70%;
+$posY: 50%;
+
+$projects: 
+(master-it-site, "140602-Master-It-Home-Page-DESKTOP.png", $size, 80%),
+(zk-lp-laatste-bod, "150113-XSell-Laatste-Bod-LP.png", $size, $posY),
+(zk-lp-woon, "150420-Achmea-Xsell-Woonverzekering-LP-Q2-Nieuw.png"),
+(zk-lp-micro, "150426-Achmea-Xsell-Thematische-Microcampagne-LP-DESKTOP-Gezinnen-Oudere-Kinderen.png", $size, $posY),
+(simyo-homepage, "150901-Simyo-Homepage-Redesign-v4s-1024x1548px.png", $size, $posY),
+(kpn-hotspots-site, "150930-KPN-HotSpots-Van-De-Zaak-Homepage.png", 80%, -10%),
+(play-lp-sound-speakers, "151125-Play-Sound-Speakers-LP-v3.png", $size, 0%),
+(vv-lp-supercadeaus, "151207-VakantieVeilingen-Landingpagina-v2.png"),
+(agis-salesfunnel, "131205-Agis-Salesfunnel-Verleidingsprincipes-100-Wederkerigheid-Sowieso-Korting-100-small-v2a.png", 100%, 60%),
+(cb-salesfunnel, "131029-Centraal-Beheer-Cross-Sell-Funnels-Auto-Stap-1.png", $size, -2%),
+(xs4all-lp, "131103-XS4ALL-Triple-Play-(Gweezy-v5).png", $size, $posY),
+(agis-productpage, "130730-Agis-Salesfunnel-2013-1000-Templates-Basisverzekering.png", 93%, 37%),
+(simyo-lp, "150610-Simyo-Spontane-Beslisser-LP-RETINA.png", $size, $posY),
+(knab-bannertest, "150825-Knab-Bannertest-Medium-Rectangle-300x250-OVERZICHT-v2.png", 120%, $posY),
+(npo-app, "140417-NPO-Plus-Android-7in-Tablet-600dp-AFLEVERING.png", $size, 110%),
+(rb-book, "111219a-Roland-Berger-Trojan-Horses-Of-Decline-Voorkant-1454x2048px.jpg", 65%, $posY),
+(carolina-enw, "090729-Carolina-Bont-Intuitiepakket-Voorkant-2251x2000px-q10.jpg", $size, $posY),
+(modint-magazine, "091209-MODINT-Time-14-Cover-q10.jpg", $size, $posY),
+(shakies-print, "Shakies-Vouchers.png", $size, $posY),
+(rina-cd, "Rina-Mushonga-CD-Cover-Flyer.png", 130%, $posY),
+(solarbird-site, "130428-solarbird.nl-Home-Slide-2-Screenshot.png", 85%, 107%);
+
+$fcc:
+(fcc-simon-game, $size, $posY),
+(fcc-tic-tac-toe, 46%, $posY),
+(fcc-calculator, 50%, 270%),
+(fcc-pomodoro, $size, $posY),
+(fcc-quote-machine, 100%, $posY),
+(fcc-wikipedia-viewer, $size, -15%),
+(fcc-twitch-tv, 90%, $posY),
+(fcc-local-weather, 100%, $posY);
+
+.project-column {
+
+	@include breakpoint(xsmall only) {
+
+		&--knab-bannertest,
+		&--carolina-enw,
+		&--rina-cd,
+		&--modint-magazine {
+
+			display: none;
+
+		}
+
+		&--shakies-print,
+		&--h4,
+		&--j8 {
+
+			margin-bottom: 0;
+
+		}		
+
+	}
+
+	@include breakpoint(small only) {
+
+		&--d11,
+		&--d12,
+		&--h3,
+		&--h4,
+		&--j7,
+		&--j8 {
+
+			margin-bottom: 0;
+
+		}		
+
+	}
+
+	@include breakpoint(medium only) {
+
+		&--simyo-lp,
+		&--fcc-wikipedia-viewer,
+		&--fcc-twitch-tv {
+
+			display: none;
+
+		}
+
+		&--d10,
+		&--d11,
+		&--d12,
+		&--h1,
+		&--h2,
+		&--h3,
+		&--j4,
+		&--j5,
+		&--j6 {
+
+			margin-bottom: 0;
+
+		}		
+
+	}
+
+	@include breakpoint(large) {
+
+		&--d9,
+		&--d10,
+		&--d11,
+		&--d12,
+		&--h1,
+		&--h2,
+		&--h3,
+		&--h4,
+		&--j5,
+		&--j6,
+		&--j7,
+		&--j8 {
+
+			margin-bottom: 0;
+
+		}		
+
+	}
+
+}
+
+.project {
+
+	display: block;
+	position: relative;
+	overflow: hidden;
+	height: 37vw;
+
+	@include breakpoint(small) {
+
+		height: 180px;
+
+	}
+
+	&:before {
+
+		$size: 300%;
+		content: "";
+		position: absolute;
+		width: $size;
+		height: $size;
+		top: -100%;
+		left: -100%;
+		z-index: -1;
+		background-size: 70%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		transform: rotate(-30deg);
+
+	}	
+
+}
+
+@each $project, $img, $img-size, $posY in $projects {
+
+	.project--#{$project} {
+
+		&:before {
+
+			background-image: url("../img/#{$img}");
+			background-size: $img-size;
+			//background-position: 50% $posY;
+
+		}
+	}
+
+}
+
+@each $project, $img-size, $posY in $fcc {
+
+	.project--#{$project} {
+
+		&:before {
+
+			background-image: url("../img/#{$project}-screenshot.png");
+			background-size: $img-size;
+			//background-position: 50% $posY;
+
+		}
+	}
+
+}
+
+.project__name {
+
+	font-weight: normal;
+	font-size: 5.4vw;
+	line-height: 1;
+	padding: 9px 12px;
+	margin-top: 15px;
+	color: black;
+	background-color: rgba(white, 0.8);
+
+	@include breakpoint(small) {
+
+		font-size: 24px;
+
+	}
+
+}
+
+
+.project__links {
+
+	display: flex;
+	margin-top: 12px;
+
+}

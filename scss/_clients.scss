@@ -1,0 +1,136 @@
+.clients__outer {
+
+	padding-bottom: 0;
+
+	@include breakpoint(medium) {
+
+		padding-bottom: 13px;
+
+	}	
+
+	@include breakpoint(large) {
+
+		padding-bottom: 9px;
+
+	}	
+
+	@include breakpoint(xlarge) {
+
+		padding-bottom: 30px;
+
+	}
+
+}
+
+
+
+.client-logo-column {
+
+	&--13,
+	&--14,
+	&--15,
+	&--16,
+	&--17,
+	&--18 {
+
+		display: none;
+
+	}	
+
+	@include breakpoint (small) {
+
+		&--13,
+		&--14,
+		&--15,
+		&--16 {
+
+			display: block;
+
+		}
+
+	}
+
+	@include breakpoint (medium) {
+
+		&--16 {
+
+			display: none;
+
+		}
+
+	}	
+
+	@include breakpoint (large) {
+
+		&--16,
+		&--17,
+		&--18 {
+
+			display: block;
+
+		}
+
+	}	
+
+	@include breakpoint (xlarge) {
+
+
+		&--13,
+		&--14,
+		&--15,
+		&--16,
+		&--17,
+		&--18 {
+
+			display: none;
+
+		}
+
+	}
+
+}
+
+
+.client-logo-box {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 13vw;
+	margin-bottom: 10px;
+
+	@include breakpoint(small) {
+
+		height: 55px;
+
+	}
+
+	@include breakpoint(medium) {
+
+		height: 53px;
+
+	}
+
+	@include breakpoint(large) {
+
+		height: 60px;
+
+	}
+
+	@include breakpoint(xlarge) {
+
+		height: 73px;
+
+	}		
+
+}
+
+.client-logo {
+
+	img {
+
+		filter: grayscale(100%);
+
+	}
+
+}

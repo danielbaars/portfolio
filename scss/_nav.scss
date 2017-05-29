@@ -1,0 +1,71 @@
+.nav,
+.footer {
+
+	padding-left: 0;
+	padding-right: 0;
+	//justify-content: center;
+
+}
+
+
+.nav__header {
+
+	font-size: 5vw;
+	line-height: 1.1;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 0;
+
+	span {
+
+		font-weight: 300;
+
+	}
+
+	@include breakpoint(medium) {
+
+		font-size: 20px;
+		text-align: left;
+
+	}
+	
+}
+
+.nav__subheader {
+
+	font-weight: 300;
+	margin-left: 6px;
+
+}
+
+.nav__menu li:last-child a {
+
+	padding-right: 0;
+
+}
+
+.footer {
+
+	.fa {
+
+		font-size: 24px;
+
+	}
+
+}
+
+
+.footer__right {
+
+	display: flex;
+
+	justify-content: center;
+
+}
+
+.footer__menu {
+
+	width: auto;
+
+}
