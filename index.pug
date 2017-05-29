@@ -16,104 +16,14 @@ block head
 	- var momentJS = false
 	- var fontAwesome = true
 
-mixin section-header(id, title, subtitle)
-	h2.section-header(class=`section-header--${id}` id=`${id}`)
-		span.section-header__title #{title}
-			if subtitle === "freeCodeCamp"
-				span.section-header__subtitle #[i.fa.fa-free-code-camp] #{subtitle}
-			else if subtitle
-				span.section-header__subtitle (#{subtitle})				
-
-mixin project(cat, project, index)
-	- var number = index + 1
-	if cat === "d" || cat === "h"
-		.column.column-block(class=`project-column--${cat}${number} project-column--${projects[project].shortName}`)
-			a.project(class=`project--${projects[project].shortName}` data-open=`${projects[project].shortName}-modal`)
-				.project__name #{projects[project].fullName}
-			if cat === "h"
-				.project__links.align-justify
-					a.project__code(href=`${projects[project].sourceCode}` target="_blank") #[i.fa.fa-github] Code
-					a.project__url(href=`${projects[project].url}` target="_blank") #[i.fa.fa-globe] Live URL
-		.reveal(id=`${projects[project].shortName}-modal` data-reveal)
-			.project__img #[img(src=`img/${projects[project].mainSrc}`)]
-	if cat === "j"
-		.column.column-block(class=`project-column--${cat}${number} project-column--${fcc[project].shortName}`)
-			a.project(class=`project--${fcc[project].shortName}` href=`https://github.com/danielbaars/${fcc[project].shortName}` target='_blank')
-				.project__name #{fcc[project].fullName}
-			.project__links.align-justify
-				a.project__code(href=`https://github.com/danielbaars/${fcc[project].shortName}` target="_blank") #[i.fa.fa-github] Code
-				a.project__url(href=`https://danielbaars.github.io/${fcc[project].shortName}` target="_blank") #[i.fa.fa-globe] Live URL
+include _mixins
 
 block content
-	.nav__outer
-		.row.arow
-			.column
-				.top-bar.nav
-					.top-bar-left
-						h1.nav__header Daniel Baars #[span.nav__subheader Designer / Developer]
-					.top-bar-right.show-for-medium
-						ul.nav__menu.menu
-							li #[a(href="#design") Design]
-							li #[a(href="#html-css") HTML / CSS]
-							li #[a(href="#javascript") JavaScript]
-	.hero__outer
-		.row.arow
-			.column
-				.hero
-					.hero__content.show-for-medium
-						.hero__header-box
-							h2.hero__header Daniel Baars
-							//-h3.hero__subheader.hero__subheader--short Designer / Developer
-							h3.hero__subheader.hero__subheader--long Freelance Graphic Designer / Web Developer
-						ul.hero__intro
-							li 25 years of experience as a graphic designer
-							li 20 years of experience designing websites
-							li 10 years of experience building websites in HTML/CSS & WordPress
-							li Certified Scrum Master (2014)
-							li freeCodeCamp's Front End Development Certificate (2017)
-	.clients__outer.section__outer.section__outer--light
-		.row.arow
-			.column
-				+section-header("clients", "Clients")
-		.row.arow.xsmall-up-3.small-up-4.medium-up-5.large-up-6
-			- var showClients = ["rb", "zk", "simyo", "abn", "xs4all", "knab", "kpn", "cb", "npo", "vv", "play", "kosmos", "achmea", "nlziet", "master-it", "qicq", "thuiscomfort", "wijnbeurs"]
-			each val, index in showClients
-				- var number = index + 1
-				.column(class=`client-logo-column--${number}`)
-					.client-logo-box
-						.client-logo(class=`client-logo--${clients[val].shortName}` style=`width: ${clients[val].logoPct}%`) #[img(src=`logos/${clients[val].shortName}-logo.svg`)]
-	.design__outer.section__outer.section__outer--dark
-		.row.arow
-			.column
-				+section-header("design", "Design")
-		.row.arow.xsmall-up-1.small-up-2.medium-up-3.large-up-4
-			- var showDesignProjects = ["kpn-hotspots-site", "zk-lp-woon", "simyo-homepage", "agis-productpage", "cb-salesfunnel", "npo-app", "knab-bannertest", "rb-book", "carolina-enw", "shakies-print", "rina-cd", "modint-magazine"] 			
-			each project, index in showDesignProjects
-				+project("d", project, index)
-	.html-css__outer.section__outer.section__outer--light
-		.row.arow
-			.column
-				+section-header("html-css", "HTML & CSS", "RWD")
-		.row.arow.xsmall-up-1.small-up-2.medium-up-3.large-up-4
-			- var showHTMLCSSProjects = ["zk-lp-micro", "master-it-site", "play-lp-sound-speakers", "simyo-lp"]
-			each project, index in showHTMLCSSProjects
-				+project("h", project, index)
-	.javascript__outer.section__outer.section__outer--dark
-		.row.arow
-			.column
-				+section-header("javascript", "JavaScript", "freeCodeCamp")
-		.row.arow.xsmall-up-1.small-up-2.medium-up-3.large-up-4
-			- var showJavaScriptProjects = ["fcc-simon-game", "fcc-tic-tac-toe", "fcc-calculator", "fcc-pomodoro", "fcc-quote-machine", "fcc-local-weather", "fcc-wikipedia-viewer", "fcc-twitch-tv"]
-			each project, index in showJavaScriptProjects
-				+project("j", project, index)
-	.footer__outer
-		.row.arow
-			.column
-				.top-bar.footer
-					.top-bar-left.show-for-medium
-						h1.nav__header Daniel Baars #[span.nav__subheader Designer / Developer]
-					.top-bar-right.footer__right
-						ul.nav__menu.footer__menu.menu
-							li #[a(href="mailto:info@danielbaars.nl" target="_blank") #[i.fa.fa-envelope]]
-							li #[a(href="https://www.linkedin.com/in/danieldesign/" target="_blank") #[i.fa.fa-linkedin-square]]
-							li #[a(href="https://github.com/danielbaars" target="_blank") #[i.fa.fa-github]]
+	include _nav
+	include _hero
+	include _clients
+	include _design-online
+	include _dev-html-css
+	include _design-offline
+	//-include _dev-javascript
+	include _footer

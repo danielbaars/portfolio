@@ -30,23 +30,38 @@
 
 
 .hero__content {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 300px;
+	//width: 550px;
 	
-	position: relative;
-	left: 275px;
-	top: 20px;
+	//position: relative;
+	//left: 275px;
+	//top: 20px;
 
 	@include breakpoint(large) {
 
-		left: 380px;
+		//left: 380px;
 
-	}	
+	}
+
+
 
 }
 
 
+.hero__header-box,
+.hero__intro {
+
+	flex-basis: 47%;
+
+}
+
 .hero__header-box {
 
-	margin-bottom: 16px;
+	//margin-bottom: 16px;
 
 }
 
@@ -54,10 +69,10 @@
 .hero__header {
 
 	font-family: 'Caveat', serif;
-	font-size: 88px;
-	line-height: 1;
+	font-size: 86px;
+	line-height: 0.9;
 	font-weight: 400;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 
 }
 
@@ -69,8 +84,17 @@
 
 	&--long {
 
-		font-size: 20px;
+		font-size: 25px;
 
 	}
+
+}
+
+
+.hero__intro {
+
+	margin-bottom: 0;
+	font-size: 18px;
+	line-height: 1.6;
 
 }

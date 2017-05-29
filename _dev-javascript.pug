@@ -1,0 +1,8 @@
+.javascript__outer.section__outer.section__outer--dark
+	.row.arow
+		.column
+			+section-header("javascript", "JavaScript", "freeCodeCamp")
+	.row.arow.xsmall-up-1.small-up-2.medium-up-3.large-up-8
+		- var showJavaScriptProjects = ["fcc-simon-game", "fcc-tic-tac-toe", "fcc-calculator", "fcc-pomodoro", "fcc-quote-machine", "fcc-local-weather", "fcc-wikipedia-viewer", "fcc-twitch-tv"]
+		each project, index in showJavaScriptProjects
+			+project("j", project, index)

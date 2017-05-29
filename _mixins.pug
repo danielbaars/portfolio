@@ -1,0 +1,27 @@
+mixin section-header(id, title, subtitle)
+	h2.section-header(class=`section-header--${id}` id=`${id}`)
+		span.section-header__title #{title}
+			if subtitle === "freeCodeCamp"
+				span.section-header__subtitle #[i.fa.fa-free-code-camp] #{subtitle}
+			else if subtitle
+				span.section-header__subtitle (#{subtitle})				
+
+mixin project(cat, project, index)
+	- var number = index + 1
+	if cat === "d" || cat === "h"
+		.column.column-block(class=`project-column--${cat}${number} project-column--${projects[project].shortName}`)
+			a.project(class=`project--${projects[project].shortName}` data-open=`${projects[project].shortName}-modal`)
+				.project__name #{projects[project].fullName}
+			if cat === "h"
+				.project__links.align-justify
+					a.project__code(href=`${projects[project].sourceCode}` target="_blank") #[i.fa.fa-github] Code
+					a.project__url(href=`${projects[project].url}` target="_blank") #[i.fa.fa-globe] Live URL
+		.reveal(id=`${projects[project].shortName}-modal` data-reveal)
+			.project__img #[img(src=`img/${projects[project].mainSrc}`)]
+	if cat === "j"
+		.column.column-block(class=`project-column--${cat}${number} project-column--${fcc[project].shortName}`)
+			a.project(class=`project--${fcc[project].shortName}` href=`https://github.com/danielbaars/${fcc[project].shortName}` target='_blank')
+				.project__name #{fcc[project].fullName}
+			.project__links.align-justify
+				a.project__code(href=`https://github.com/danielbaars/${fcc[project].shortName}` target="_blank") #[i.fa.fa-github] Code
+				a.project__url(href=`https://danielbaars.github.io/${fcc[project].shortName}` target="_blank") #[i.fa.fa-globe] Live URL
