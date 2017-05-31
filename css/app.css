@@ -5497,6 +5497,18 @@ html.is-reveal-open body {
       width: 390px; } }
 
 .hero__header-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   position: absolute;
   top: 6vh;
   left: 30vw;
@@ -5513,6 +5525,7 @@ html.is-reveal-open body {
       width: 390px; } }
 
 .hero__header {
+  position: relative;
   font-family: 'Caveat', serif;
   font-size: 12.5vw;
   line-height: 0.9;
@@ -5520,7 +5533,9 @@ html.is-reveal-open body {
   margin-bottom: 2.2vw; }
   @media print, screen and (min-width: 37.5em) {
     .hero__header {
-      font-size: 67px; } }
+      left: -5px;
+      font-size: 67px;
+      margin-bottom: 14px; } }
   @media print, screen and (min-width: 48em) {
     .hero__header {
       font-size: 86px; } }

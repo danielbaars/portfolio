@@ -77,6 +77,10 @@ $hero-overlap-size: 60px;
 
 .hero__header-box {
 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: nowrap;
 	position: absolute;
 	top: 6vh;
 	left: ($hero-image-size-xsmall) - (2 * $hero-overlap-size-xsmall);
@@ -99,6 +103,7 @@ $hero-overlap-size: 60px;
 
 .hero__header {
 
+	position: relative;
 	font-family: 'Caveat', serif;
 	font-size: 12.5vw;
 	line-height: 0.9;
@@ -106,7 +111,9 @@ $hero-overlap-size: 60px;
 	margin-bottom: 2.2vw;
 
 	@include breakpoint(small) {
+		left: -5px;
 		font-size: 67px;
+		margin-bottom: 14px;
 	}	
 
 	@include breakpoint(medium) {
