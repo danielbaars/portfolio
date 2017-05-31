@@ -4,9 +4,14 @@ $chambray: #445878;
 $morning-glory: #92CDCF;
 $solitude: #EEEFF7;
 
+$bg-light: white;
+$bg-dark: $chambray;
+$txt-on-light: $black-russian;
+$txt-on-dark: white;
+
 body {
 
-	background-color: $solitude;
+	background-color: $bg-light;
 
 }
 
@@ -32,129 +37,130 @@ body {
 
 .hero__outer {
 
-
-	background-color: $chambray;
-	
-
-}
-
-
-.hero {
-
-	background-image: url("../img/daniel-portrait-bg-chambray.png");
+	background-color: $bg-dark;
 	
 }
 
 
-.section__outer--light {
+%section__outer--light {
 
-	background-color: $solitude;
+	background-color: $bg-light;
 
-}
+	.section-header:before {
 
-.section__outer--dark {
-
-	background-color: $chambray;
-
-}
-
-
-.section-header {
-
-	.section__outer--light & {
-
-		&:before {
-
-			border-color: rgba($black-russian, 0.4);
-
-		}
-
-	}	
-
-	.section__outer--dark & {
-
-		&:before {
-
-			border-color: rgba($solitude, 0.4);
-
-		}		
+		border-color: rgba($txt-on-light, 0.4);
 
 	}
 
-}
+	.section-header__title {
 
-
-.section-header__title {
-
-	.section__outer--light & {
-
-		background-color: $solitude;
-		color: $black-russian;			
-
-	}	
-
-	.section__outer--dark & {
-
-		background-color: $chambray;
-		color: white;		
+		background-color: $bg-light;
+		color: $txt-on-light;
 
 	}
 
+	.project {
+
+		border: 1px solid rgba($txt-on-light, 0.4);
+
+	}
+
+	.project__links a {	
+
+		color: $bg-dark;
+
+		&:hover {
+
+			color: $txt-on-light;
+			
+		}	
+
+	}				
+
 }
 
 
-.project {
+%section__outer--dark {
 
-	.section__outer--light & {
+	background-color: $bg-dark;
 
-		border: 1px solid rgba($black-russian, 0.4);
+	.section-header:before {
 
-
-	}	
-
-	.section__outer--dark & {
-
-		border: 1px solid rgba($solitude, 0.4);
+		border-color: rgba($bg-light, 0.4);
 		
+	}
+
+	.section-header__title {		
+
+		background-color: $bg-dark;
+		color: $txt-on-dark;
 
 	}
 
+	.project {
+
+		border: 1px solid rgba($bg-light, 0.4);
+
+	}
+
+	.project__links a {	
+
+		color: $txt-on-dark;
+
+		&:hover {
+
+			color: $morning-glory;
+			
+		}			
+
+	}				
 
 }
 
 
-.project__links {	
+.daniel-portfolio--design {
 
-	.section__outer--dark & {
+	.clients__outer,
+	.html-css__outer,
+	.skills__outer {
 
-		a {
-
-			color: white;
-
-			&:hover {
-
-				color: $morning-glory;
-				
-			}
-
-		}
+		@extend %section__outer--light;				
 
 	}
 
-	.section__outer--light & {
+	.online__outer,
+	.offline__outer {
 
-		a {
+		@extend %section__outer--dark;				
 
-			color: $black-russian;
-
-			&:hover {
-
-				color: $chambray;
-				
-			}
-
-		}
-
-	}	
+	}
 
 }
+
+
+.daniel-portfolio--dev {
+
+	.clients__outer,
+	.javascript__outer,
+	.skills__outer {
+
+		@extend %section__outer--light;				
+
+	}
+
+	.html-css__outer,
+	.online__outer {
+
+		@extend %section__outer--dark;				
+
+	}
+
+}
+
+
+
+
+
+
+
+

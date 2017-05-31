@@ -403,3 +403,152 @@ var fcc =
     "fullName" : "Use the Twitchtv JSON API"
   }
 };
+
+
+var nav = 
+{
+  "online" : {
+    "shortName" : "online",
+    "fullName" : "Online Design"
+  },
+  "offline" : {
+    "shortName" : "offline",
+    "fullName" : "Offline Design"
+  },
+  "html-css" : {
+    "shortName" : "html-css",
+    "fullName" : "HTML / CSS"
+  },
+  "javascript" : {
+    "shortName" : "javascript",
+    "fullName" : "JavaScript"
+  },
+  "skills" : {
+    "shortName" : "skills",
+    "fullName" : "Skills"
+  }
+};
+
+
+var skills =
+{
+  "html" : {
+    "shortName" : "html",
+    "fullName" : "HTML",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "HTML5_logo_and_wordmark.svg"
+  },
+  "css" : {
+    "shortName" : "css",
+    "fullName" : "CSS",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "CSS3_logo_and_wordmark.svg"
+  },
+  "javascript" : {
+    "shortName" : "javascript",
+    "fullName" : "JavaScript",
+    "cat" : "dev",
+    "level" : "junior",
+    "logo" : "Unofficial_JavaScript_logo_2.svg"
+  },
+  "sass" : {
+    "shortName" : "sass",
+    "fullName" : "Sass",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "Sass-Logo-Seal-Color.svg"
+  },
+  "git" : {
+    "shortName" : "git",
+    "fullName" : "Git",
+    "cat" : "dev",
+    "level" : "junior",
+    "logo" : "Git-Icon-1788C.svg"
+  },
+  "bootstrap" : {
+    "shortName" : "bootstrap",
+    "fullName" : "Bootstrap",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "bootstrap-solid.svg"
+  },
+  "foundation" : {
+    "shortName" : "foundation",
+    "fullName" : "Foundation",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "intro-foundation.png"
+  },
+  "pug" : {
+    "shortName" : "pug",
+    "fullName" : "Pug",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "pug-final-logo-_-colour-128.svg"
+  },
+  "bem" : {
+    "shortName" : "bem",
+    "fullName" : "BEM",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "bem-logo.svg"
+  },
+  "wordpress" : {
+    "shortName" : "wordpress",
+    "fullName" : "WordPress",
+    "cat" : "dev",
+    "level" : "medior",
+    "logo" : "wordpress-logo-notext.svg"
+  },
+  "codekit" : {
+    "shortName" : "codekit",
+    "fullName" : "CodeKit",
+    "cat" : "dev",
+    "level" : "senior",
+    "logo" : "codekit-logo.svg"
+  },
+  "gsap" : {
+    "shortName" : "gsap",
+    "fullName" : "GSAP",
+    "cat" : "dev",
+    "level" : "medior",
+    "logo" : "greensock-man-logo.svg"
+  },
+  "hype" : {
+    "shortName" : "hype",
+    "fullName" : "Hype",
+    "cat" : "dev",
+    "level" : "medior",
+    "logo" : "HypeApp-512.png"
+  },
+  "photoshop" : {
+    "shortName" : "photoshop",
+    "fullName" : "Photoshop",
+    "cat" : "design",
+    "level" : "senior",
+    "logo" : "photoshop-cc.svg"
+  },
+  "illustrator" : {
+    "shortName" : "illustrator",
+    "fullName" : "Illustrator",
+    "cat" : "design",
+    "level" : "medior",
+    "logo" : "adobe-illustrator-cc.svg"
+  },
+  "indesign" : {
+    "shortName" : "indesign",
+    "fullName" : "InDesign",
+    "cat" : "design",
+    "level" : "senior",
+    "logo" : "indesign-cc.svg"
+  },
+  "aftereffects" : {
+    "shortName" : "aftereffects",
+    "fullName" : "After Effects",
+    "cat" : "design",
+    "level" : "medior",
+    "logo" : "after-effects-cc.svg"
+  }
+};

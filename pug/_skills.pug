@@ -1,0 +1,37 @@
+mixin skills-v1(level)
+	each val in skills
+		if val.level == level
+			span.skill 
+				span.skill__logo.imgc(class=`skill__logo--${val.shortName}`) #[img(src=`skills-logos/${val.logo}`)]
+				span.skill__name.name #{val.fullName}
+
+mixin skills(level)
+	.row
+		.column
+			div(class=`skills__row skills__row--${level}`)
+				.row
+					.xsmall-5.small-2.medium-3.large-2.column
+						.skills__level 
+							span #{level}
+					.xsmall-7.small-10.medium-9.large-10.column
+						.row.xsmall-up-1.small-up-3.large-up-5
+							each val in skills
+								if val.level == level
+									.column.column-block.skills__column
+										span.skills__logo.imgc(class=`skills__logo--${val.shortName}`) #[img(src=`skills-logos/${val.logo}`)]
+										span.skills__name #{val.fullName}
+
+.skills__outer.section__outer
+	.row.arow
+		.column
+			+section-header("skills", "Skills & Certificates", "Skills")
+			+skills("senior")
+			+skills("medior")
+			+skills("junior")
+			.skills__certificate-box
+				.skills__certificate 
+					span.certificate__logo.certificate__logo--scrum.imgc #[img(src="skills-logos/Logos_SCR-Primary-RGB.png")]
+					span.certificate__title Certified Scrum Master
+				.skills__certificate 
+					span.certificate__logo.certificate__logo--fcc.imgc #[img(src="skills-logos/Free-Code-Camp-logo.svg")]
+					span.certificate__title Front End Development Certificate

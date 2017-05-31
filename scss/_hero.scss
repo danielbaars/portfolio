@@ -1,67 +1,98 @@
+.hero__outer {
 
+	overflow: hidden;
+
+}
 
 .hero {
 
 	display: flex;
-	position: relative;
+	justify-content: center;
 	height: 25vh;
-	background-position: 42% -96px;	
-	background-repeat: no-repeat;
-	background-size: auto 1040px;
 	color: white;
 
+	@include breakpoint(small) {
+		height: 222px;
+	}	
+
 	@include breakpoint(medium) {
-
 		height: 294px;
-		background-position: -21% 12px;
-		background-size: auto 830px;
-
 	}	
 
 	@include breakpoint(large) {
 
-		background-position: -96px -24px;
-		background-size: auto 1040px;
-		
 
 	}
 	
 }
 
+$hero-image-size-xsmall: 62vw;
+$hero-header-box-size-xsmall: 62vw;
+$hero-overlap-size-xsmall: 16vw;
+$hero-image-size-small: 300px;
+$hero-header-box-size-small: 300px;
+$hero-overlap-size-small: 40px;
+$hero-image-size: 390px;
+$hero-header-box-size: 390px;
+$hero-overlap-size: 60px;
 
 .hero__content {
 
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-left: 300px;
-	//width: 550px;
+	position: relative;
+	left: -(($hero-image-size-xsmall + $hero-header-box-size-xsmall - 100vw) / 2);
+
+	@include breakpoint(small) {
+		left: 0;
+		width: ($hero-image-size-small + $hero-header-box-size-small) - (2 * $hero-overlap-size-small);
+	}	
+
+	@include breakpoint(medium) {
+		width: ($hero-image-size + $hero-header-box-size) - (2 * $hero-overlap-size);
+	}	
 	
-	//position: relative;
-	//left: 275px;
-	//top: 20px;
 
-	@include breakpoint(large) {
+}
 
-		//left: 380px;
+.hero__image {
 
+	position: relative;
+	top: 4px;
+	left: -($hero-overlap-size-xsmall);
+	width: $hero-image-size-xsmall;
+
+	@include breakpoint(small) {
+		top: 7px;
+		left: -($hero-overlap-size-small);
+		width: $hero-image-size-small;
+	}	
+
+	@include breakpoint(medium) {
+		top: 11px;
+		left: -($hero-overlap-size);
+		width: $hero-image-size;
 	}
 
-
-
 }
 
-
-.hero__header-box,
-.hero__intro {
-
-	flex-basis: 47%;
-
-}
 
 .hero__header-box {
 
-	//margin-bottom: 16px;
+	position: absolute;
+	top: 6vh;
+	left: ($hero-image-size-xsmall) - (2 * $hero-overlap-size-xsmall);
+	width: $hero-header-box-size-xsmall;	
+
+	@include breakpoint(small) {
+		top: 57px;
+		left: ($hero-image-size-small) - (2 * $hero-overlap-size-small);
+		width: $hero-header-box-size-small;
+	}	
+
+	@include breakpoint(medium) {
+		top: 72px;
+		left: ($hero-image-size) - (2 * $hero-overlap-size);
+		width: $hero-header-box-size;
+	}
 
 }
 
@@ -69,10 +100,18 @@
 .hero__header {
 
 	font-family: 'Caveat', serif;
-	font-size: 86px;
+	font-size: 12.5vw;
 	line-height: 0.9;
 	font-weight: 400;
-	margin-bottom: 12px;
+	margin-bottom: 2.2vw;
+
+	@include breakpoint(small) {
+		font-size: 67px;
+	}	
+
+	@include breakpoint(medium) {
+		font-size: 86px;
+	}	
 
 }
 
@@ -80,12 +119,15 @@
 .hero__subheader {
 
 	position: relative;
+	font-size: 3.75vw;
 	line-height: 1;
 
-	&--long {
+	@include breakpoint(small) {
+		font-size: 19px;
+	}	
 
+	@include breakpoint(medium) {
 		font-size: 25px;
-
 	}
 
 }

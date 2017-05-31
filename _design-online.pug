@@ -1,9 +1,0 @@
-.design__outer.section__outer.section__outer--dark
-	.row.arow
-		.column
-			+section-header("design", "Online Design")
-	.row.arow.xsmall-up-1.small-up-2.medium-up-3.large-up-4
-		//-- var showDesignProjects = ["kpn-hotspots-site", "zk-lp-woon", "simyo-homepage", "agis-productpage", "cb-salesfunnel", "npo-app", "knab-bannertest", "rb-book", "carolina-enw", "shakies-print", "rina-cd", "modint-magazine"]
-		- var showDesignProjects = ["kpn-hotspots-site", "zk-lp-woon", "simyo-homepage", "agis-productpage"] 	 			
-		each project, index in showDesignProjects
-			+project("d", project, index)

@@ -54,6 +54,11 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// @import "_nth-child-quantity-mixins.scss";
+
+$column-block-mb-xsmall: 1.25rem;
+$column-block-mb-medium: 1.875rem;
+
 .arow {
 
 	width: 100%;
@@ -76,6 +81,8 @@
 @import "_clients.scss";
 
 @import "_projects.scss";
+
+@import "_skills.scss";
 
 .imgc {
 	img,

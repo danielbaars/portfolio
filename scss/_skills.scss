@@ -1,0 +1,171 @@
+.skills__row {
+
+	background: $solitude;
+	padding: 18px;
+	margin-bottom: 20px;
+
+}
+
+
+.skills__column {
+
+	&:last-child {
+
+		margin-bottom: 0;
+	}
+
+	@include breakpoint(small) {
+
+		margin-bottom: 0;
+
+	}
+
+	@media screen and #{breakpoint(small)} and #{breakpoint(medium down)} {
+
+		&:nth-last-child(n + 4):first-child,
+		&:nth-last-child(n + 4):first-child ~ &:nth-child(-n + 3) {
+			
+			margin-bottom: $column-block-mb-medium;
+
+		}
+
+		&:nth-last-child(n + 7):first-child,
+		&:nth-last-child(n + 7):first-child ~ &:nth-child(-n + 6) {
+			
+			margin-bottom: $column-block-mb-medium;
+
+		}		
+
+	}	
+
+
+	@include breakpoint(large) {
+
+		&:nth-last-child(n + 6):first-child,
+		&:nth-last-child(n + 6):first-child ~ &:nth-child(-n + 5) {
+			
+			margin-bottom: $column-block-mb-medium;
+
+		}
+
+	}
+
+}
+
+.skills__level {
+
+	display: flex;
+	align-items: flex-start;
+	font-size: 20px;
+	font-weight: bold;
+	color: $bg-dark;
+	text-transform: uppercase;
+
+	@include breakpoint(small) {
+		align-items: center;
+	}
+
+}
+
+.skills__column {
+
+	position: relative;
+	height: 28px;
+	display: flex;
+	align-items: center;
+
+}
+
+.skills__logo {
+
+	display: inline-block;
+	width: 28px;
+	margin-right: 8px;
+
+	&--html,
+	&--css {
+
+		width: 22px;
+		top: -3px;
+
+	}
+
+}
+
+.skills__name {
+	
+	position: absolute;
+	left: 52px;
+
+	@include breakpoint(medium) {
+		font-size: 18px;
+	}
+
+}
+
+
+.skills__certificate-box {
+
+	margin-top: 10px;
+
+	@include breakpoint(small) {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	@include breakpoint(large) {
+		margin-top: 15px;
+	}
+
+}
+
+
+.skills__certificate {
+
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;		
+	height: 55px;
+	font-size: 16px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-bottom: 14px;
+
+	@include breakpoint(small) {
+		margin-bottom: 0;
+	}	
+
+	@include breakpoint(medium) {
+		height: 64px;
+		font-size: 20px;
+	}	
+
+}
+
+
+
+.certificate__logo {
+
+	&--scrum {
+
+		width: 162px;
+
+		@include breakpoint(small) {
+			width: 196px;
+		}
+
+	}
+
+	&--fcc {
+
+		width: 165px;
+
+		@include breakpoint(small) {
+			width: 200px;
+		}
+
+	}	
+
+}
+

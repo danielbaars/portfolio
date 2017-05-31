@@ -1,0 +1,18 @@
+.javascript__outer.section__outer
+	.row.arow
+		.column
+			+section-header("javascript", "JavaScript (freeCodeCamp)", "JavaScript")
+			.row.xsmall-up-2.small-up-3.medium-up-4
+				- var showJavaScriptProjects = ["fcc-simon-game", "fcc-tic-tac-toe", "fcc-calculator", "fcc-pomodoro", "fcc-local-weather", "fcc-quote-machine", "fcc-wikipedia-viewer", "fcc-twitch-tv"]
+				each project, index in showJavaScriptProjects
+					+project("j", project, index)
+			//-.row.xsmall-up-2.small-up-3.large-up-4
+				- var showJavaScriptProjects = ["fcc-simon-game", "fcc-tic-tac-toe", "fcc-calculator", "fcc-pomodoro", "fcc-local-weather", "fcc-quote-machine", "fcc-wikipedia-viewer", "fcc-twitch-tv"]
+				each project, index in showJavaScriptProjects
+					- var number = index + 1
+					.column.column-block(class=`project-column--${cat}${number} project-column--${fcc[project].shortName}`)
+						a.project.project--fcc(class=`project--${fcc[project].shortName}` href=`https://github.com/danielbaars/${fcc[project].shortName}` target='_blank')
+							.project__name #{fcc[project].fullName}
+						.project__links.align-justify
+							a.project__code(href=`https://github.com/danielbaars/${fcc[project].shortName}` target="_blank") #[i.fa.fa-github] Code
+							a.project__url(href=`https://danielbaars.github.io/${fcc[project].shortName}` target="_blank") #[i.fa.fa-globe] Live URL					

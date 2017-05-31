@@ -1,0 +1,23 @@
+mixin nav(...items)
+	.nav__outer
+		.row.arow
+			.column
+				.top-bar.nav
+					.top-bar-left
+						//-h1.nav__header Daniel Baars #[span.nav__subheader Designer / Developer]
+						h1.nav__header Daniel Baars #[span.nav__subheader Portfolio]
+					.top-bar-right.show-for-medium
+						ul.nav__menu.menu
+							each item in items
+								li #[a(href=`#${nav[item].shortName}`) #{nav[item].fullName}]
+//-.nav__outer
+	.row.arow
+		.column
+			.top-bar.nav
+				.top-bar-left
+					h1.nav__header Daniel Baars #[span.nav__subheader Designer / Developer]
+				.top-bar-right.show-for-medium
+					ul.nav__menu.menu
+						- var showNavItems = ["online", "html-css", "offline", "skills"]
+						each item in showNavItems
+							li #[a(href=`#${nav[item].shortName}`) #{nav[item].fullName}]

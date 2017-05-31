@@ -510,8 +510,10 @@ $responsive-embed-ratios: (
 // 29. Reveal
 // ----------
 
+$reveal-img-width: 720px; 
+
 $reveal-background: $white;
-$reveal-width: 800px;
+$reveal-width: $reveal-img-width + (2 * 16px) + (2 * 1px); // image width plus padding and border-width
 $reveal-max-width: $global-width;
 $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;

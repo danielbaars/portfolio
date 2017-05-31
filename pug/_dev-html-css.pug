@@ -1,0 +1,8 @@
+.html-css__outer.section__outer
+	.row.arow
+		.column
+			+section-header("html-css", "Responsive Web Design & Development", "Responsive Web Design")
+			.row.xsmall-up-1.small-up-2.large-up-4
+				- var showHTMLCSSProjects = ["zk-lp-micro", "master-it-site", "play-lp-sound-speakers", "simyo-lp"]
+				each project, index in showHTMLCSSProjects
+					+project("h", project, index)

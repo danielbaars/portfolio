@@ -1,0 +1,44 @@
+mixin section-header(id, fullTitle, shortTitle)
+	h2.section-header(class=`section-header--${id}` id=`${id}`)
+		span.section-header__title.section-header__title--full #{fullTitle}
+		if shortTitle
+			span.section-header__title.section-header__title--short #{shortTitle}
+		else
+			span.section-header__title.section-header__title--short #{fullTitle}				
+
+mixin project(cat, project, index)
+	- var number = index + 1
+	if cat === "d" || cat === "h"
+		.column.column-block(class=`project-column--${cat}${number} project-column--${projects[project].shortName}`)
+			a.project(class=`project--${projects[project].shortName}` data-open=`${projects[project].shortName}-modal`)
+				//-.project__name #{projects[project].client}
+				.project__name #{clients[projects[project].client].fullName}
+			if cat === "h"
+				.project__links.align-justify
+					a.project__code(href=`${projects[project].sourceCode}` target="_blank") #[i.fa.fa-github] Code
+					a.project__url(href=`${projects[project].url}` target="_blank") #[i.fa.fa-globe] Live
+		.reveal(id=`${projects[project].shortName}-modal` data-reveal)
+			.project__img #[img(src=`img/${projects[project].mainSrc}`)]
+	if cat === "j"
+		.column.column-block(class=`project-column--${cat}${number} project-column--${fcc[project].shortName}`)
+			a.project.project--fcc(class=`project--${fcc[project].shortName}` href=`https://github.com/danielbaars/${fcc[project].shortName}` target='_blank')
+				.project__name #{fcc[project].fullName}
+			.project__links.align-justify
+				a.project__code(href=`https://github.com/danielbaars/${fcc[project].shortName}` target="_blank") #[i.fa.fa-github] Code
+				a.project__url(href=`https://danielbaars.github.io/${fcc[project].shortName}` target="_blank") #[i.fa.fa-globe] Live
+	
+mixin table(head)
+	table.table&attributes(attributes)
+		if head
+			+row.table-row--head
+				each column in head
+					th.table-cell.table-cell--head=column
+		block
+
+mixin row()
+	tr.table-row&attributes(attributes)
+		block
+
+mixin cell()
+	td.table-cell&attributes(attributes)
+		block				
