@@ -1,8 +1,26 @@
+$hero-height-xsmall: 25vh;
+$hero-height-small: 222px;
+
+$hero-image-size-xsmall: 62vw;
+$hero-header-box-size-xsmall: 62vw;
+$hero-overlap-size-xsmall: 16vw;
+$hero-image-size-small: 300px;
+$hero-header-box-size-small: 300px;
+$hero-overlap-size-small: 40px;
+$hero-image-size: 390px;
+$hero-header-box-size: 390px;
+$hero-overlap-size: 60px;
+
+$hero-image-size-xlarge: 620px;
+$hero-overlap-size-xlarge: 160px;
+$hero-image-rotation-offset-xlarge: 84px;
+
 .hero__outer {
 
 	overflow: hidden;
 
 }
+
 
 .hero {
 
@@ -19,22 +37,13 @@
 		height: 294px;
 	}	
 
-	@include breakpoint(large) {
-
-
+	@include breakpoint(xlarge) {
+		//height: 176px;
 	}
 	
 }
 
-$hero-image-size-xsmall: 62vw;
-$hero-header-box-size-xsmall: 62vw;
-$hero-overlap-size-xsmall: 16vw;
-$hero-image-size-small: 300px;
-$hero-header-box-size-small: 300px;
-$hero-overlap-size-small: 40px;
-$hero-image-size: 390px;
-$hero-header-box-size: 390px;
-$hero-overlap-size: 60px;
+
 
 .hero__content {
 
@@ -48,6 +57,10 @@ $hero-overlap-size: 60px;
 
 	@include breakpoint(medium) {
 		width: ($hero-image-size + $hero-header-box-size) - (2 * $hero-overlap-size);
+	}
+
+	@include breakpoint(xlarge) {
+		//width: ($hero-image-size-xlarge + $hero-header-box-size) - (2 * $hero-overlap-size-xlarge) - ($hero-image-rotation-offset-xlarge / 2);
 	}	
 	
 
@@ -70,6 +83,13 @@ $hero-overlap-size: 60px;
 		top: 11px;
 		left: -($hero-overlap-size);
 		width: $hero-image-size;
+	}
+
+	@include breakpoint(xlarge) {
+		//transform: rotate(9deg);
+		//top: -124px;
+		//left: -($hero-overlap-size-xlarge) - $hero-image-rotation-offset-xlarge;
+		//width: $hero-image-size-xlarge;
 	}
 
 }
@@ -96,6 +116,22 @@ $hero-overlap-size: 60px;
 		top: 72px;
 		left: ($hero-image-size) - (2 * $hero-overlap-size);
 		width: $hero-header-box-size;
+	}
+
+	@include breakpoint(xlarge) {
+		//top: 25px;
+		//left: ($hero-image-size-xlarge) - (2 * $hero-overlap-size-xlarge) - ($hero-image-rotation-offset-xlarge / 2);
+		//width: $hero-header-box-size;
+		top: 20px;
+	}	
+
+}
+
+
+.hero__logo {
+
+	@include breakpoint(xlarge) {
+		width: 246px;
 	}
 
 }

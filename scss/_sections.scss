@@ -61,6 +61,19 @@
 }
 
 
+.client-logo-row {
+
+	margin-top: -12px;
+
+	@include breakpoint(xlarge) {
+
+		margin-top: -16px;
+
+	}
+
+}
+
+
 @mixin section-header-font-roboto {
 
 	font-family: $body-font-family;

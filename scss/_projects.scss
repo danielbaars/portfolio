@@ -19,11 +19,11 @@ $projects:
 (simyo-lp, "150610-Simyo-Spontane-Beslisser-LP-RETINA.png", $size, $posY),
 (knab-bannertest, "150825-Knab-Bannertest-Medium-Rectangle-300x250-OVERZICHT-v2.png", 120%, $posY),
 (npo-app, "140417-NPO-Plus-Android-7in-Tablet-600dp-AFLEVERING.png", $size, 110%),
-(rb-book, "111219a-Roland-Berger-Trojan-Horses-Of-Decline-Voorkant-1454x2048px.jpg", 65%, $posY),
-(carolina-enw, "090729-Carolina-Bont-Intuitiepakket-Voorkant-2251x2000px-q10.jpg", $size, $posY),
+(rb-book, "mockup-portrait-rb-book-1096p.png", 55%, $posY),
+(carolina-enw, "090729-Carolina-Bont-Intuitiepakket-Voorkant-2251x2000px-q10.jpg", 40%, $posY),
 (modint-magazine, "091209-MODINT-Time-14-Cover-q10.jpg", $size, $posY),
-(shakies-print, "Shakies-Vouchers.png", $size, $posY),
-(rina-cd, "Rina-Mushonga-CD-Cover-Flyer.png", 130%, $posY),
+(shakies-print, "mockup-shakies-print-1780p.png", $size, $posY),
+(rina-cd, "mockup-rina-cd-1780p.png", 100%, $posY),
 (solarbird-site, "130428-solarbird.nl-Home-Slide-2-Screenshot.png", 85%, 107%);
 
 $fcc:
@@ -40,14 +40,7 @@ $fcc:
 
 	@include breakpoint(xsmall only) {
 
-		&--knab-bannertest,
-		&--carolina-enw,
-		&--rina-cd,
-		&--modint-magazine {
-
-			display: none;
-
-		}		
+		
 
 	}
 
@@ -184,3 +177,60 @@ $fcc:
 	}
 
 }
+
+
+.reveal {
+
+	$border-width: 1px;
+	$padding: 16px;
+
+	padding: 3rem 1rem 1rem 1rem;
+
+	@include breakpoint(small) {
+
+		width: 532 + (2 * $padding) + (2 * $border-width);
+		padding: 3rem 2rem 1rem 2rem;
+
+	}
+
+	@include breakpoint(medium) {
+
+		width: 678px;
+		padding: 1rem 4rem;
+		
+	}
+
+	@include breakpoint(large) {
+
+		$padding: 48px;
+
+		width: 960 + (2 * $padding) + (2 * $border-width);
+		padding: 1rem 3rem;
+		height: 95vh;
+		
+	}	
+
+	@include breakpoint(xlarge) {
+
+		$padding: 48px;
+
+		width: 1200 + (2 * $padding) + (2 * $border-width);
+		
+		
+	}
+
+	@include breakpoint(1920px) {
+
+		width: 1780 + (2 * $padding) + (2 * $border-width);
+		
+	}	
+
+	.project__img {
+
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+}
+

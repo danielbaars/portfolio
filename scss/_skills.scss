@@ -34,7 +34,14 @@
 			
 			margin-bottom: $column-block-mb-medium;
 
-		}		
+		}	
+
+		&:nth-last-child(n + 10):first-child,
+		&:nth-last-child(n + 10):first-child ~ &:nth-child(-n + 9) {
+			
+			margin-bottom: $column-block-mb-medium;
+
+		}			
 
 	}	
 

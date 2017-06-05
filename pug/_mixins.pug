@@ -11,14 +11,14 @@ mixin project(cat, project, index)
 	if cat === "d" || cat === "h"
 		.column.column-block(class=`project-column--${cat}${number} project-column--${projects[project].shortName}`)
 			a.project(class=`project--${projects[project].shortName}` data-open=`${projects[project].shortName}-modal`)
-				//-.project__name #{projects[project].client}
 				.project__name #{clients[projects[project].client].fullName}
 			if cat === "h"
 				.project__links.align-justify
 					a.project__code(href=`${projects[project].sourceCode}` target="_blank") #[i.fa.fa-github] Code
 					a.project__url(href=`${projects[project].url}` target="_blank") #[i.fa.fa-globe] Live
-		.reveal(id=`${projects[project].shortName}-modal` data-reveal)
-			.project__img #[img(src=`img/${projects[project].mainSrc}`)]
+		.reveal(id=`${projects[project].shortName}-modal` data-reveal="" data-v-offset="20")
+			button.close-button(data-close="" aria-label="Close modal" type="button") #[span(aria-hidden="true") &times;]
+			.project__img #[img(data-interchange=`[img/mockup-portrait-${projects[project].shortName}-686p.png, xsmall], [img/mockup-portrait-${projects[project].shortName}-1096p.png, medium], [img/mockup-${projects[project].shortName}-1920p.png, large], [img/mockup-${projects[project].shortName}-2400p.png, xlarge], [img/mockup-${projects[project].shortName}-1780p.png, full-hd]`)]
 	if cat === "j"
 		.column.column-block(class=`project-column--${cat}${number} project-column--${fcc[project].shortName}`)
 			a.project.project--fcc(class=`project--${fcc[project].shortName}` href=`https://github.com/danielbaars/${fcc[project].shortName}` target='_blank')

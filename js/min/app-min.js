@@ -1,1 +1,1 @@
-"use strict";$(document).foundation(),$(document).ready(function(){});
+"use strict";Foundation.Interchange.SPECIAL_QUERIES["full-hd"]="screen and (min-width: 1920px)",$(document).foundation(),$(document).ready(function(){});

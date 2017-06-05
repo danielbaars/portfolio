@@ -4096,7 +4096,7 @@ html.is-reveal-open body {
   padding: 1rem;
   border: 1px solid #cacaca;
   border-radius: 0;
-  background-color: #fefefe;
+  background-color: #f6f6f6;
   position: relative;
   top: 100px;
   margin-right: auto;
@@ -4113,8 +4113,8 @@ html.is-reveal-open body {
     margin-bottom: 0; }
   @media print, screen and (min-width: 48em) {
     .reveal {
-      width: 754px;
-      max-width: 72.75rem; } }
+      width: 1234px;
+      max-width: 100%; } }
   @media print, screen and (min-width: 48em) {
     .reveal .reveal {
       right: auto;
@@ -4125,15 +4125,15 @@ html.is-reveal-open body {
   @media print, screen and (min-width: 48em) {
     .reveal.tiny {
       width: 30%;
-      max-width: 72.75rem; } }
+      max-width: 100%; } }
   @media print, screen and (min-width: 48em) {
     .reveal.small {
       width: 50%;
-      max-width: 72.75rem; } }
+      max-width: 100%; } }
   @media print, screen and (min-width: 48em) {
     .reveal.large {
       width: 90%;
-      max-width: 72.75rem; } }
+      max-width: 100%; } }
   .reveal.full {
     top: 0;
     left: 0;
@@ -5356,6 +5356,12 @@ html.is-reveal-open body {
     .daniel-portfolio--dev .skills__outer {
       margin-top: -1.875rem; } }
 
+.client-logo-row {
+  margin-top: -12px; }
+  @media screen and (min-width: 75em) {
+    .client-logo-row {
+      margin-top: -16px; } }
+
 .section-header {
   position: relative;
   text-align: center;
@@ -5422,16 +5428,25 @@ html.is-reveal-open body {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 0; }
-  .nav__header span {
-    font-weight: 300; }
+  @media print, screen and (min-width: 37.5em) {
+    .nav__header {
+      font-size: 18px; } }
   @media print, screen and (min-width: 48em) {
     .nav__header {
-      font-size: 20px;
+      font-size: 19px;
       text-align: left; } }
+  @media print, screen and (min-width: 64em) {
+    .nav__header {
+      position: relative;
+      top: -2px;
+      font-size: 20px; } }
 
 .nav__subheader {
   font-weight: 300;
   margin-left: 6px; }
+
+.nav__menu > li > a {
+  padding: 0.7rem; }
 
 .nav__menu li:last-child a {
   padding-right: 0; }
@@ -5471,14 +5486,17 @@ html.is-reveal-open body {
 
 .hero__content {
   position: relative;
-  left: -12vw; }
+  left: -8.5vw; }
   @media print, screen and (min-width: 37.5em) {
     .hero__content {
       left: 0;
-      width: 520px; } }
+      width: 550px; } }
   @media print, screen and (min-width: 48em) {
     .hero__content {
-      width: 660px; } }
+      width: 700px; } }
+  @media print, screen and (min-width: 64em) {
+    .hero__content {
+      width: 776px; } }
 
 .hero__image {
   position: relative;
@@ -5500,29 +5518,48 @@ html.is-reveal-open body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: absolute;
-  top: 6vh;
+  top: 5vh;
   left: 30vw;
-  width: 62vw; }
+  width: 55vw; }
   @media print, screen and (min-width: 37.5em) {
     .hero__header-box {
-      top: 57px;
+      top: 28px;
       left: 220px;
-      width: 300px; } }
+      width: auto; } }
   @media print, screen and (min-width: 48em) {
     .hero__header-box {
-      top: 72px;
+      top: 40px;
       left: 270px;
-      width: 390px; } }
+      width: auto; } }
+  @media print, screen and (min-width: 64em) {
+    .hero__header-box {
+      top: 20px; } }
+
+.hero__logo .logo__name,
+.hero__logo .logo__title {
+  fill: #EEEFF7; }
+
+@media print, screen and (min-width: 37.5em) {
+  .hero__logo {
+    width: 330px; } }
+
+@media print, screen and (min-width: 48em) {
+  .hero__logo {
+    width: 430px; } }
+
+@media print, screen and (min-width: 64em) {
+  .hero__logo {
+    width: 506px; } }
 
 .hero__header {
   position: relative;
@@ -5615,10 +5652,6 @@ html.is-reveal-open body {
 .client-logo img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%); }
-
-@media screen and (max-width: 37.4375em) {
-  .project-column--knab-bannertest, .project-column--carolina-enw, .project-column--rina-cd, .project-column--modint-magazine {
-    display: none; } }
 
 @media screen and (min-width: 37.5em) and (max-width: 47.9375em) {
   .project-column--fcc-local-weather, .project-column--fcc-twitch-tv {
@@ -5721,24 +5754,24 @@ html.is-reveal-open body {
   background-size: 70%; }
 
 .project--rb-book:before {
-  background-image: url("../img/111219a-Roland-Berger-Trojan-Horses-Of-Decline-Voorkant-1454x2048px.jpg");
-  background-size: 65%; }
+  background-image: url("../img/mockup-portrait-rb-book-1096p.png");
+  background-size: 55%; }
 
 .project--carolina-enw:before {
   background-image: url("../img/090729-Carolina-Bont-Intuitiepakket-Voorkant-2251x2000px-q10.jpg");
-  background-size: 70%; }
+  background-size: 40%; }
 
 .project--modint-magazine:before {
   background-image: url("../img/091209-MODINT-Time-14-Cover-q10.jpg");
   background-size: 70%; }
 
 .project--shakies-print:before {
-  background-image: url("../img/Shakies-Vouchers.png");
+  background-image: url("../img/mockup-shakies-print-1780p.png");
   background-size: 70%; }
 
 .project--rina-cd:before {
-  background-image: url("../img/Rina-Mushonga-CD-Cover-Flyer.png");
-  background-size: 130%; }
+  background-image: url("../img/mockup-rina-cd-1780p.png");
+  background-size: 100%; }
 
 .project--solarbird-site:before {
   background-image: url("../img/130428-solarbird.nl-Home-Slide-2-Screenshot.png");
@@ -5798,6 +5831,36 @@ html.is-reveal-open body {
     .project__links {
       font-size: 16px; } }
 
+.reveal {
+  padding: 3rem 1rem 1rem 1rem; }
+  @media print, screen and (min-width: 37.5em) {
+    .reveal {
+      width: 566px;
+      padding: 3rem 2rem 1rem 2rem; } }
+  @media print, screen and (min-width: 48em) {
+    .reveal {
+      width: 678px;
+      padding: 1rem 4rem; } }
+  @media print, screen and (min-width: 64em) {
+    .reveal {
+      width: 1058px;
+      padding: 1rem 3rem;
+      height: 95vh; } }
+  @media screen and (min-width: 75em) {
+    .reveal {
+      width: 1298px; } }
+  @media screen and (min-width: 120em) {
+    .reveal {
+      width: 1878px; } }
+  .reveal .project__img {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
 .skills__row {
   background: #EEEFF7;
   padding: 18px;
@@ -5816,6 +5879,9 @@ html.is-reveal-open body {
     margin-bottom: 1.875rem; }
   .skills__column:nth-last-child(n + 7):first-child,
   .skills__column:nth-last-child(n + 7):first-child ~ .skills__column:nth-child(-n + 6) {
+    margin-bottom: 1.875rem; }
+  .skills__column:nth-last-child(n + 10):first-child,
+  .skills__column:nth-last-child(n + 10):first-child ~ .skills__column:nth-child(-n + 9) {
     margin-bottom: 1.875rem; } }
 
 @media print, screen and (min-width: 64em) {
