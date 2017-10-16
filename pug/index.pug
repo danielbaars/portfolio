@@ -1,18 +1,20 @@
 extends _home
 
 block append head
-	- var metaDescription = "Portfolio of graphic designer / web developer Daniel Baars."	
+	- var metaDescription = 'Portfolio of front-end developer Daniel Baars.'	
 	- var companyName = 'Daniel Baars'
-	- var bodyClass = 'daniel-portfolio daniel-portfolio--design'	
+	- var bodyClass = 'daniel-portfolio daniel-portfolio--dev'	
 
 block content
 	include _nav
-	+nav("online", "html-css", "offline", "skills")
+	+nav('html-css', 'javascript', 'react', 'skills')
 	include _hero
+	+hero('dev')
 	include _clients
-	include _design-online
 	include _dev-html-css
-	include _design-offline
-	//-include _dev-javascript
+	include _dev-javascript
+	include _react
+	//- include _design-online
 	include _skills
 	include _footer
+	+footer('Front-End Developer')

@@ -1,11 +1,11 @@
 .javascript__outer.section__outer
 	.row.arow
 		.column
-			+section-header("javascript", "JavaScript (freeCodeCamp)", "JavaScript")
+			+section-header('javascript', 'JavaScript (freeCodeCamp)', 'JavaScript')
 			.row.xsmall-up-2.small-up-3.medium-up-4
-				- var showJavaScriptProjects = ["fcc-simon-game", "fcc-tic-tac-toe", "fcc-calculator", "fcc-pomodoro", "fcc-local-weather", "fcc-quote-machine", "fcc-wikipedia-viewer", "fcc-twitch-tv"]
+				- var showJavaScriptProjects = ['fcc-game-of-life', 'fcc-heat-map', 'fcc-national-contiguity', 'fcc-simon-game', 'fcc-tic-tac-toe', 'fcc-calculator', 'fcc-quote-machine', 'fcc-wikipedia-viewer']
 				each project, index in showJavaScriptProjects
-					+project("j", project, index)
+					+project('j', project, index)
 			//-.row.xsmall-up-2.small-up-3.large-up-4
 				- var showJavaScriptProjects = ["fcc-simon-game", "fcc-tic-tac-toe", "fcc-calculator", "fcc-pomodoro", "fcc-local-weather", "fcc-quote-machine", "fcc-wikipedia-viewer", "fcc-twitch-tv"]
 				each project, index in showJavaScriptProjects

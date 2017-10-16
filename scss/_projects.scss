@@ -3,7 +3,7 @@
 $size: 70%;
 $posY: 50%;
 
-$projects: 
+$projects:
 (master-it-site, "140602-Master-It-Home-Page-DESKTOP.png", $size, 80%),
 (zk-lp-laatste-bod, "150113-XSell-Laatste-Bod-LP.png", $size, $posY),
 (zk-lp-woon, "150420-Achmea-Xsell-Woonverzekering-LP-Q2-Nieuw.png"),
@@ -24,9 +24,13 @@ $projects:
 (modint-magazine, "091209-MODINT-Time-14-Cover-q10.jpg", $size, $posY),
 (shakies-print, "mockup-shakies-print-1780p.png", $size, $posY),
 (rina-cd, "mockup-rina-cd-1780p.png", 100%, $posY),
-(solarbird-site, "130428-solarbird.nl-Home-Slide-2-Screenshot.png", 85%, 107%);
+(solarbird-site, "130428-solarbird.nl-Home-Slide-2-Screenshot.png", 85%, 107%),
+(qicq-webshop, "qicq-webshop-product-page-q10.jpg", 50%, $posY);
 
 $fcc:
+(fcc-game-of-life, $size, $posY),
+(fcc-heat-map, $size, $posY),
+(fcc-national-contiguity, $size, $posY),
 (fcc-simon-game, $size, $posY),
 (fcc-tic-tac-toe, 46%, $posY),
 (fcc-calculator, 50%, 270%),
@@ -40,7 +44,7 @@ $fcc:
 
 	@include breakpoint(xsmall only) {
 
-		
+
 
 	}
 
@@ -51,9 +55,9 @@ $fcc:
 
 			display: none;
 
-		}		
+		}
 
-	}	
+	}
 
 }
 
@@ -85,7 +89,7 @@ $fcc:
 		background-repeat: no-repeat;
 		transform: rotate(-30deg);
 
-	}	
+	}
 
 }
 
@@ -197,7 +201,7 @@ $fcc:
 
 		width: 678px;
 		padding: 1rem 4rem;
-		
+
 	}
 
 	@include breakpoint(large) {
@@ -207,23 +211,23 @@ $fcc:
 		width: 960 + (2 * $padding) + (2 * $border-width);
 		padding: 1rem 3rem;
 		height: 95vh;
-		
-	}	
+
+	}
 
 	@include breakpoint(xlarge) {
 
 		$padding: 48px;
 
 		width: 1200 + (2 * $padding) + (2 * $border-width);
-		
-		
+
+
 	}
 
 	@include breakpoint(1920px) {
 
 		width: 1780 + (2 * $padding) + (2 * $border-width);
-		
-	}	
+
+	}
 
 	.project__img {
 
@@ -233,4 +237,3 @@ $fcc:
 	}
 
 }
-

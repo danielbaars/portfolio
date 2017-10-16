@@ -24,33 +24,33 @@
 
 		&:nth-last-child(n + 4):first-child,
 		&:nth-last-child(n + 4):first-child ~ &:nth-child(-n + 3) {
-			
+
 			margin-bottom: $column-block-mb-medium;
 
 		}
 
 		&:nth-last-child(n + 7):first-child,
 		&:nth-last-child(n + 7):first-child ~ &:nth-child(-n + 6) {
-			
+
 			margin-bottom: $column-block-mb-medium;
 
-		}	
+		}
 
 		&:nth-last-child(n + 10):first-child,
 		&:nth-last-child(n + 10):first-child ~ &:nth-child(-n + 9) {
-			
+
 			margin-bottom: $column-block-mb-medium;
 
-		}			
+		}
 
-	}	
+	}
 
 
 	@include breakpoint(large) {
 
 		&:nth-last-child(n + 6):first-child,
 		&:nth-last-child(n + 6):first-child ~ &:nth-child(-n + 5) {
-			
+
 			margin-bottom: $column-block-mb-medium;
 
 		}
@@ -85,6 +85,7 @@
 
 .skills__logo {
 
+	position: relative;
 	display: inline-block;
 	width: 28px;
 	margin-right: 8px;
@@ -97,10 +98,17 @@
 
 	}
 
+	&--react {
+
+		width: 42px;
+    left: -4px;
+
+	}
+
 }
 
 .skills__name {
-	
+
 	position: absolute;
 	left: 52px;
 
@@ -132,7 +140,7 @@
 
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;		
+	align-items: center;
 	height: 55px;
 	font-size: 16px;
 	flex-direction: column;
@@ -141,12 +149,12 @@
 
 	@include breakpoint(small) {
 		margin-bottom: 0;
-	}	
+	}
 
 	@include breakpoint(medium) {
 		height: 64px;
 		font-size: 20px;
-	}	
+	}
 
 }
 
@@ -172,7 +180,6 @@
 			width: 200px;
 		}
 
-	}	
+	}
 
 }
-

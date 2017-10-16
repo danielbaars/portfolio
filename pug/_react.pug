@@ -1,0 +1,8 @@
+.online__outer.section__outer
+	.row.arow
+		.column
+			+section-header('react', 'React')
+			.row.xsmall-up-1.small-up-2.large-up-4
+				- var showReactProjects = ['qicq-webshop'] 	 			
+				each project, index in showReactProjects
+					+project('h', project, index)

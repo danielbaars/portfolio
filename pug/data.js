@@ -1,4 +1,4 @@
-var clients = 
+var clients =
 {
   "abn" : {
     "shortName" : "abn",
@@ -164,7 +164,7 @@ var clients =
   }
 };
 
-var projects = 
+var projects =
 {
   "agis-productpage" : {
     "shortName" : "agis-productpage",
@@ -261,6 +261,14 @@ var projects =
     "mainSrc" : "151125-Play-Sound-Speakers-LP-v3.png",
     "sourceCode" : "https://github.com/danielbaars/play-van-kpn-lp-sound-speakers",
     "url" : "https://danielbaars.github.io/play-van-kpn-lp-sound-speakers/"
+  },
+  "qicq-webshop" : {
+    "shortName" : "qicq-webshop",
+    "fullName" : "QicQ webshop",
+    "client" : "qicq",
+    "mainSrc" : "151125-Play-Sound-Speakers-LP-v3.png",
+    "sourceCode" : "https://github.com/danielbaars/qicq-webshop",
+    "url" : "https://danielbaars.github.io/qicq-webshop/"
   },
   "rb-book" : {
     "shortName" : "rb-book",
@@ -401,11 +409,23 @@ var fcc =
   "fcc-twitch-tv" : {
     "shortName" : "fcc-twitch-tv",
     "fullName" : "Use the Twitchtv JSON API"
+  },
+  "fcc-national-contiguity" : {
+    "shortName" : "fcc-national-contiguity",
+    "fullName" : "Force Directed Graph"
+  },
+  "fcc-heat-map" : {
+    "shortName" : "fcc-heat-map",
+    "fullName" : "Heat Map"
+  },
+  "fcc-game-of-life" : {
+    "shortName" : "fcc-game-of-life",
+    "fullName" : "Game of Life"
   }
 };
 
 
-var nav = 
+var nav =
 {
   "online" : {
     "shortName" : "online",
@@ -422,6 +442,10 @@ var nav =
   "javascript" : {
     "shortName" : "javascript",
     "fullName" : "JavaScript"
+  },
+  "react" : {
+    "shortName" : "react",
+    "fullName" : "React"
   },
   "skills" : {
     "shortName" : "skills",
@@ -459,13 +483,6 @@ var skills =
     "cat" : "dev",
     "level" : "senior",
     "logo" : "Sass-Logo-Seal-Color.svg"
-  },
-  "git" : {
-    "shortName" : "git",
-    "fullName" : "Git",
-    "cat" : "dev",
-    "level" : "junior",
-    "logo" : "Git-Icon-1788C.svg"
   },
   "bootstrap" : {
     "shortName" : "bootstrap",
@@ -550,5 +567,33 @@ var skills =
     "cat" : "design",
     "level" : "medior",
     "logo" : "after-effects-cc.svg"
+  },
+  "react" : {
+    "shortName" : "react",
+    "fullName" : "React",
+    "cat" : "dev",
+    "level" : "junior",
+    "logo" : "React-icon.svg"
+  },
+  "redux" : {
+    "shortName" : "redux",
+    "fullName" : "Redux",
+    "cat" : "dev",
+    "level" : "junior",
+    "logo" : "redux-logo.svg"
+  },
+  "d3" : {
+    "shortName" : "d3",
+    "fullName" : "D3",
+    "cat" : "dev",
+    "level" : "junior",
+    "logo" : "d3-logo.svg"
+  },
+  "git" : {
+    "shortName" : "git",
+    "fullName" : "Git",
+    "cat" : "dev",
+    "level" : "junior",
+    "logo" : "Git-Icon-1788C.svg"
   }
 };
